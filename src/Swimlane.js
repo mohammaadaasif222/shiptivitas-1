@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from './Card';
+import Dragula from 'dragula';
 import './Swimlane.css';
 
 export default class Swimlane extends React.Component {
@@ -15,13 +16,16 @@ export default class Swimlane extends React.Component {
         />
       );
     })
+ 
     return (
       <div className="Swimlane-column">
         <div className="Swimlane-title">{this.props.name}</div>
         <div className="Swimlane-dragColumn" ref={this.props.dragulaRef}>
           {cards}
         </div>
-      </div>);
+      </div>
+      )
+      ;
   }
 
 }
